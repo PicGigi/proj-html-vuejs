@@ -2,21 +2,21 @@
 <template>
   <div class="container-four">
     <div class="testimonials">
-      <h1>Testimonials.</h1>
+      <h1 class="f-2">Testimonials.</h1>
       <div class="testimonial-info">
-        <img src="@/assets/img/h3-img-04.png" alt="">
-        <h3 style="color: white; font-size: 1.5rem;">Cynthia Clark</h3>
-        <span style="color: #A6A6A6; font-size: 1.2rem;">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt possimus voluptate animi reprehenderit consequatur?"</span>
+        <img :src="arrInfo[currentImg].img" alt="">
+        <h3 class="f-2" style="color: white; font-size: 1.5rem;">{{ arrInfo[currentImg].text}}</h3>
+        <span class="f-1" style="color: #A6A6A6; font-size: 1.2rem;">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt possimus voluptate animi reprehenderit consequatur?"</span>
         <div class="slider-counter">
           1
           <div class="slider-body">
-            <div class="slider-progress"></div>
+            <div class="slider-progress" :class="arrInfo[currentImg].class"></div>
           </div>
           3
         </div>
         <div class="arrows">
-          <font-awesome-icon icon="fa-solid fa-arrow-right" style="rotate:180deg"/>
-          <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          <font-awesome-icon icon="fa-solid fa-arrow-right" @click="goLeft()" style="rotate:180deg"/>
+          <font-awesome-icon icon="fa-solid fa-arrow-right" @click="goRight()"/>
         </div>
       </div>
     </div>
@@ -33,7 +33,46 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      currentImg: 0,
+      arrInfo: [
+        {
+          img: 'img/h3-img-04.png',
+          text: 'Cynthia Clark',
+          class: 'one',
+        },
+        {
+          img: 'img/h3-img-07.png',
+          text: 'Liliana Wang',
+          class: 'two',
+        },
+        {
+          img: 'img/h3-img-08.png',
+          text: 'Simona Wayne',
+          class: 'three',
+        },
+      ],
+    };
+  },
+  methods: {
+    goLeft() {
+      if (this.currentImg === 0) {
+        this.currentImg = 2;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImg--;
+      }
+    },
+    goRight() {
+      if (this.currentImg === 2) {
+        this.currentImg = 0;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImg++;
+      }
+    },
+  },
 };
 </script>
 
@@ -70,6 +109,8 @@ export default {
     img{
       border: 5px solid white;
       border-radius: 50%;
+      width: 120px;
+      height: 120px;
     }
     .slider-counter{
       display: flex;
@@ -85,6 +126,12 @@ export default {
           height: 100%;
           width: calc(100% / 3);
           background-color: white;
+        }
+        .two{
+          margin-left: calc(100% / 3);
+        }
+        .three{
+          margin-left: calc((100% / 3) * 2);
         }
       }
     }

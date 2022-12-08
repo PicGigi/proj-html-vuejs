@@ -7,34 +7,34 @@
         <div class="teaching-spot ts-one">
           <img src="@/assets/img/h1-contact-rev-02.png" alt="" class="marker">
           <div class="marker-info">
-            <h3 style="font-size: 1.3rem">New York Coaching</h3>
-            <strong style="font-size: .8rem">READ MORE</strong>
+            <h3 class="f-2" style="font-size: 1.3rem">New York Coaching</h3>
+            <strong class="f-1" style="font-size: .8rem">READ MORE</strong>
           </div>
         </div>
         <div class="teaching-spot ts-two">
           <img src="@/assets/img/h1-contact-rev-02.png" alt="" class="marker">
           <div class="marker-info">
-            <h3 style="font-size: 1.3rem">London Coaching</h3>
-            <strong style="font-size: .8rem">READ MORE</strong>
+            <h3 class="f-2" style="font-size: 1.3rem">London Coaching</h3>
+            <strong class="f-1" style="font-size: .8rem">READ MORE</strong>
           </div>
         </div>
         <div class="teaching-spot ts-three">
           <img src="@/assets/img/h1-contact-rev-02.png" alt="" class="marker">
           <div class="marker-info">
-            <h3 style="font-size: 1.3rem">Melbourne Coaching</h3>
-            <strong style="font-size: .8rem">READ MORE</strong>
+            <h3 class="f-2" style="font-size: 1.3rem">Melbourne Coaching</h3>
+            <strong class="f-1" style="font-size: .8rem">READ MORE</strong>
           </div>
         </div>
     </div>
     <div class="contact-us">
-      <h2 style="font-size: 2.5rem">Contact us<span style="color: #FF5612">.</span></h2>
-      <span style="color: #A6A6A6;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+      <h2 class="f-2" style="font-size: 2.5rem">Contact us<span style="color: #FF5612">.</span></h2>
+      <span class="f-1" style="color: #A6A6A6;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
       <div class="line"></div>
       <div class="input-section">
-        <input type="text" placeholder="Your Name" style="width: 48%">
-        <input type="text" placeholder="Your Email" style="width: 48%">
-        <textarea type="text" placeholder="Write a message..." style="width: 100%;" class="message" />
-        <button>SEND <div class="v-line" /><font-awesome-icon icon="fa-solid fa-arrow-right" /></button>
+        <input class="f-1" type="text" placeholder="Your Name" style="width: 48%">
+        <input class="f-1" type="text" placeholder="Your Email" style="width: 48%">
+        <textarea type="text" placeholder="Write a message..." style="width: 100%;" class="message f-1" />
+        <button class="f-1">SEND <div class="v-line" /><font-awesome-icon icon="fa-solid fa-arrow-right" /></button>
       </div>
     </div>
     <div class="sponsors">

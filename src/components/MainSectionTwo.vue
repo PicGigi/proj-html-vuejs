@@ -2,23 +2,23 @@
 <template>
   <div class="container-two">
     <div class="upcoming-events">
-      <div class="events-title"><h3>Upcoming Events</h3></div>
+      <div class="events-title f-2"><h3>Upcoming Events</h3></div>
       <div class="event" v-for="objEvent in arrEvents" :key="objEvent.place">
-        <div class="date-square">
+        <div class="date-square f-2">
           <span class="day">{{ objEvent.day }}</span>
           <span>Jan, 2022</span>
         </div>
         <div class="event-info">
-          <h4>{{ objEvent.place}}</h4>
+          <h4 class="f-2">{{ objEvent.place}}</h4>
           <div>
             <font-awesome-icon icon="fa-regular fa-clock" style="color: #FF4612; margin-right: .5rem;"/>
-            <span style="color: #A6A6A6">9:00 am - 5:00 pm, Jan 7, 2022</span>
+            <span class="f-1" style="color: #A6A6A6">9:00 am - 5:00 pm, Jan 7, 2022</span>
           </div>
           <div>
             <font-awesome-icon icon="fa-solid fa-location-dot" style="color: #FF4612; margin-right: .5rem;"/>
-            <span style="color: #A6A6A6">Cambridge, MA 02138, USA</span>
+            <span class="f-1" style="color: #A6A6A6">Cambridge, MA 02138, USA</span>
           </div>
-          <strong>READ MORE</strong>
+          <strong class="f-1">READ MORE</strong>
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@ export default {
         flex-direction: column;
         gap: .5rem;
         height: 100%;
-        justify-content: center;
+        justify-content:space-between;
         margin-left: 2rem;
 
         h4{

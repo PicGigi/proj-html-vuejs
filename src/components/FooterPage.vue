@@ -3,9 +3,9 @@
   <footer>
     <div class="container-footer">
       <div class="info-col">
-        <h2>About</h2>
+        <h2 class="f-2">About</h2>
         <div class="line"></div>
-        <span style="color: #A6A6A6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos velit excepturi voluptatibus praesentium cumque eum ut totam, hic veniam numquam maxime</span>
+        <span class="f-1" style="color: #A6A6A6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos velit excepturi voluptatibus praesentium cumque eum ut totam, hic veniam numquam maxime</span>
         <div class="social-icons">
           <div class="social"><font-awesome-icon icon="fa-brands fa-linkedin-in" /></div>
           <div class="social"><font-awesome-icon icon="fa-brands fa-facebook-f" /></div>
@@ -13,46 +13,46 @@
         </div>
       </div>
       <div class="info-col">
-        <h2>Twitter</h2>
+        <h2 class="f-2">Twitter</h2>
         <div class="line"></div>
         <div class="tweet">
           <font-awesome-icon icon="fa-brands fa-twitter" style="color: #FF5612; font-size: 1.5rem;"/>
-          <span style="color:#A6A6A6"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur at veritatis, recusandae quia velit optio distinctio numquam ipsa pariatur.</span>
+          <span class="f-1" style="color:#A6A6A6"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur at veritatis, recusandae quia velit optio distinctio numquam ipsa pariatur.</span>
         </div>
         <div class="tweet">
           <font-awesome-icon icon="fa-brands fa-twitter" style="color: #FF5612; font-size: 1.5rem;"/>
-          <span style="color:#A6A6A6"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur at veritatis, recusandae quia velit optio distinctio numquam ipsa pariatur.</span>
+          <span class="f-1" style="color:#A6A6A6"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur at veritatis, recusandae quia velit optio distinctio numquam ipsa pariatur.</span>
         </div>
       </div>
       <div class="info-col">
-        <h2>Important links</h2>
+        <h2 class="f-2">Important links</h2>
         <div class="line"></div>
         <ul class="links">
-          <li><a href="#!">About me</a></li>
-          <li><a href="#!">About us</a></li>
-          <li><a href="#!">Language packs</a></li>
-          <li><a href="#!">Become a coach</a></li>
-          <li><a href="#!">Monthly events</a></li>
+          <li class="f-1"><a href="#!">About me</a></li>
+          <li class="f-1"><a href="#!">About us</a></li>
+          <li class="f-1"><a href="#!">Language packs</a></li>
+          <li class="f-1"><a href="#!">Become a coach</a></li>
+          <li class="f-1"><a href="#!">Monthly events</a></li>
         </ul>
       </div>
       <div class="info-col">
-        <h2>Contact me</h2>
+        <h2 class="f-2">Contact me</h2>
         <div class="line"></div>
         <ul class="contacts">
-          <li><font-awesome-icon icon="fa-solid fa-location-dot" class="contact-icon"/>457 BigBlue Street, NY 10013</li>
-          <li><font-awesome-icon icon="fa-solid fa-phone" class="contact-icon"/>(315) 5512-2579</li>
-          <li><font-awesome-icon icon="fa-regular fa-envelope" class="contact-icon"/>everlead@mikado.com</li>
+          <li class="f-1"><font-awesome-icon icon="fa-solid fa-location-dot" class="contact-icon"/>457 BigBlue Street, NY 10013</li>
+          <li class="f-1"><font-awesome-icon icon="fa-solid fa-phone" class="contact-icon"/>(315) 5512-2579</li>
+          <li class="f-1"><font-awesome-icon icon="fa-regular fa-envelope" class="contact-icon"/>everlead@mikado.com</li>
         </ul>
         <div class="subscribe">
           <label for="name">
-            <input type="text" placeholder="Your Name">
-            <button>SUBSCRIBE</button>
+            <input class="f-1" type="text" placeholder="Your Name">
+            <button class="f-1">SUBSCRIBE</button>
           </label>
         </div>
       </div>
     </div>
     <div class="bottom-bar">
-      <span style="font-size: .75rem">Copyright Everland&copy;MikadoThemes</span>
+      <span class="f-1" style="font-size: .75rem">Copyright Everland&copy;MikadoThemes</span>
     </div>
   </footer>
 </template>

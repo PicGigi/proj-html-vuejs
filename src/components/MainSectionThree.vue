@@ -3,12 +3,12 @@
   <div class="container-three">
     <div class="creative-leader">
       <div class="cr-le-left">
-        <h3>Creative Leader<span style="color:#FF4612">.</span></h3>
+        <h3 class="f-2">Creative Leader<span style="color:#FF4612">.</span></h3>
         <div class="line"></div>
-        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis incidunt illo ad at placeat cumque voluptatum itaque accusamus saepe adipisci hic dolorem a, quos quaerat facilis officia eum iusto expedita!</span>
-        <strong>READ MORE</strong>
+        <span class="f-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis incidunt illo ad at placeat cumque voluptatum itaque accusamus saepe adipisci hic dolorem a, quos quaerat facilis officia eum iusto expedita!</span>
+        <strong class="f-1">READ MORE</strong>
       </div>
-      <div class="cr-le-right">
+      <div class="cr-le-right f-2">
         <div class="bar-section">
           <h4>Mentorship</h4>
           <h4>78%</h4>
@@ -33,16 +33,17 @@
 
     </div>
     <div class="latest-news">
-      <h3>Latest news<span style="color:#FF4612">.</span></h3>
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+      <img src="@/assets/svg/svg-4.svg" alt="" style="position:absolute; left: 5rem; top:-5rem ">
+      <h3 class="f-2">Latest news<span style="color:#FF4612">.</span></h3>
+      <span class="f-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
       <div class="line"></div>
       <div class="cards-section">
         <div class="arrows">
-          <font-awesome-icon icon="fa-solid fa-arrow-right" style="rotate:180deg"/>
-          <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          <font-awesome-icon icon="fa-solid fa-arrow-right" @click="goLeft()" style="rotate:180deg" />
+          <font-awesome-icon icon="fa-solid fa-arrow-right" @click="goRight() "/>
         </div>
-        <div class="card">
-          <img src="@/assets/img/h1-blog-img-03.jpg" alt="">
+        <div class="card f-1">
+          <img :src="arrImg[currentImgOne].img" alt="">
           <div class="card-info">
             <div>
               <font-awesome-icon icon="fa-regular fa-clock" style="margin: 0 .5rem 0 0; color: #FF4612; font-size: .8rem"/>
@@ -50,7 +51,7 @@
               <font-awesome-icon icon="fa-regular fa-user" style="margin: 0 .5rem 0 1rem; color: #FF4612; font-size: .8rem"/>
               <span style="font-size: .8rem">Amanda Doe</span>
             </div>
-            <h4>Next Investment</h4>
+            <h4 class="f-2">{{ arrImg[currentImgOne].text }}</h4>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quisquam quaerat...</span>
             <strong>READ MORE</strong>
             <div class="orange-square">
@@ -59,8 +60,8 @@
             </div>
           </div>
         </div>
-        <div class="card">
-          <img src="@/assets/img/h1-blog-img-04.jpg" alt="">
+        <div class="card f-1">
+          <img :src="arrImg[currentImgTwo].img" alt="">
           <div class="card-info">
             <div>
               <font-awesome-icon icon="fa-regular fa-clock" style="margin: 0 .5rem 0 0; color: #FF4612; font-size: .8rem"/>
@@ -68,7 +69,7 @@
               <font-awesome-icon icon="fa-regular fa-user" style="margin: 0 .5rem 0 1rem; color: #FF4612; font-size: .8rem"/>
               <span style="font-size: .8rem">Amanda Doe</span>
             </div>
-            <h4>Team Building</h4>
+            <h4 class="f-2">{{ arrImg[currentImgTwo].text }}</h4>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quisquam quaerat...</span>
             <strong>READ MORE</strong>
             <div class="orange-square">
@@ -77,8 +78,8 @@
             </div>
           </div>
         </div>
-        <div class="card">
-          <img src="@/assets/img/h1-blog-img-01.jpg" alt="">
+        <div class="card f-1">
+          <img :src="arrImg[currentImgThree].img" alt="">
           <div class="card-info">
             <div>
               <font-awesome-icon icon="fa-regular fa-clock" style="margin: 0 .5rem 0 0; color: #FF4612; font-size: .8rem"/>
@@ -86,7 +87,7 @@
               <font-awesome-icon icon="fa-regular fa-user" style="margin: 0 .5rem 0 1rem; color: #FF4612; font-size: .8rem"/>
               <span style="font-size: .8rem">Amanda Doe</span>
             </div>
-            <h4>New Business Day</h4>
+            <h4 class="f-2">{{ arrImg[currentImgThree].text }}</h4>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quisquam quaerat...</span>
             <strong>READ MORE</strong>
             <div class="orange-square">
@@ -102,7 +103,73 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      currentImgOne: 0,
+      currentImgTwo: 1,
+      currentImgThree: 2,
+      arrImg: [
+        {
+          img: 'img/h1-blog-img-01.jpg',
+          text: 'Next Investment',
+        },
+        {
+          img: 'img/h1-blog-img-02.jpg',
+          text: 'Team Building',
+        },
+        {
+          img: 'img/h1-blog-img-03.jpg',
+          text: 'New Business Day',
+        },
+        {
+          img: 'img/h1-blog-img-04.jpg',
+          text: 'Sample text',
+        },
+      ],
+    };
+  },
+  methods: {
+    goLeft() {
+      if (this.currentImgOne === 0) {
+        this.currentImgOne = 3;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImgOne--;
+      }
+      if (this.currentImgTwo === 0) {
+        this.currentImgTwo = 3;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImgTwo--;
+      }
+      if (this.currentImgThree === 0) {
+        this.currentImgThree = 3;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImgThree--;
+      }
+    },
+    goRight() {
+      if (this.currentImgOne === 3) {
+        this.currentImgOne = 0;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImgOne++;
+      }
+      if (this.currentImgTwo === 3) {
+        this.currentImgTwo = 0;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImgTwo++;
+      }
+      if (this.currentImgThree === 3) {
+        this.currentImgThree = 0;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImgThree++;
+      }
+    },
+  },
 };
 </script>
 
@@ -138,6 +205,7 @@ export default {
         flex-direction: column;
         padding: 1rem;
         gap: 2rem;
+        font-size: 1.2rem;
 
         .bar-section{
           display: flex;
@@ -163,6 +231,7 @@ export default {
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+      position: relative;
 
       h3{
         font-size: 2.5rem;

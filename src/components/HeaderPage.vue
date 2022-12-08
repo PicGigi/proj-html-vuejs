@@ -1,13 +1,13 @@
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable max-len -->
 <template>
   <header>
 <!-- SFONDO -->
-    <img
-    src="@/assets/img/rev-slider-main-home-img-03.jpg" alt="">
+    <img :src="arrBackground[currentImg]" alt="">
 <!-- PARTE SUPERIORE HEADER CON LOGO E MENU' -->
     <div class="header-top">
       <img src="@/assets/img/logo-img-01.png" alt=""> <!--LOGO -->
-      <ul class="header-menu"> <!--MENU' -->
+      <ul class="header-menu f-1"> <!--MENU' -->
         <li v-for="objLi in arrMenu" :key="objLi" class="header-li">
           <font-awesome-icon icon="fa-solid fa-arrow-right" class="li-arrow"/>
           <span class="li-text">{{objLi}}</span>
@@ -18,19 +18,18 @@
     </div>
     <div class="header-bottom">
       <div class="arrows">
-        <div class="arrow"><font-awesome-icon icon="fa-solid fa-arrow-right" style="rotate: 180deg"/></div>
-        <div class="arrow"><font-awesome-icon icon="fa-solid fa-arrow-right" /></div>
+        <div class="arrow" @click="change()"><font-awesome-icon icon="fa-solid fa-arrow-right" style="rotate: 180deg"/></div>
+        <div class="arrow" @click="change()"><font-awesome-icon icon="fa-solid fa-arrow-right" /></div>
       </div>
       <div class="our-team">
-        <h1 class="our-team-title">Our Team<span style="color: #FF4612;">.</span></h1>
-        <span class="our-team-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quidem libero sed dignissimos labore, sint voluptatum accusamus laboriosam.</span>
+        <h1 class="our-team-title f-2">Our Team<span style="color: #FF4612;">.</span></h1>
+        <span class="our-team-text f-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quidem libero sed dignissimos labore, sint voluptatum accusamus laboriosam.</span>
         <div class="buttons">
           <button>READ MORE <div class="line" /><font-awesome-icon icon="fa-solid fa-arrow-right" /></button>
           <button>PURCHASE <div class="line" /><font-awesome-icon icon="fa-solid fa-arrow-right" /></button>
         </div>
       </div>
     </div>
-
   </header>
 </template>
 
@@ -39,7 +38,18 @@ export default {
   data() {
     return {
       arrMenu: ['HOMES', 'PAGES', 'BLOG', 'SHOP', 'EVENTS', 'ELEMENTS'],
+      arrBackground: ['img/rev-slider-main-home-img-03.jpg', 'img/rev-slider-main-home-img-02.png'],
+      currentImg: 0,
     };
+  },
+  methods: {
+    change() {
+      if (this.currentImg === 0) {
+        this.currentImg = 1;
+      } else if (this.currentImg === 1) {
+        this.currentImg = 0;
+      }
+    },
   },
 };
 </script>

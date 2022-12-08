@@ -1,32 +1,33 @@
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable max-len -->
 <template>
   <div class="container-one">
     <div class="main-top">
-      <h2>Our specialties<span style="color: #FF4612;">.</span></h2>
-      <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit</span>
+      <h2 class="f-2">Our specialties<span style="color: #FF4612;">.</span></h2>
+      <span class="f-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit</span>
       <div class="little-line"></div>
       <div class="circles-section">
         <div class="circle" v-for="objCircle in arrCircles" :key="objCircle.text">
           <img :src="objCircle.img" alt="">
-          <h3>{{ objCircle.text }}</h3>
-          <span>Lorem ipsum dolor sit amet consectetur.</span>
+          <h3 class="f-2">{{ objCircle.text }}</h3>
+          <span class="f-1">Lorem ipsum dolor sit amet consectetur.</span>
         </div>
       </div>
     </div>
     <img src="@/assets/svg/svg-4.svg" alt="" class="bg-img">
     <div>
       <div class="main-slider">
-        <img src="@/assets/img/h1-blog-img-04.jpg" alt="">
+        <img :src="arrImg[currentImg]" alt="">
         <div class="arrow-section">
-          <div class="left-arrow arrow"><font-awesome-icon icon="fa-solid fa-arrow-right" style="rotate: 180deg"/></div>
-          <div class="right-arrow arrow"><font-awesome-icon icon="fa-solid fa-arrow-right" /></div>
+          <div class="left-arrow arrow" @click="goLeft()"><font-awesome-icon icon="fa-solid fa-arrow-right" style="rotate: 180deg"/></div>
+          <div class="right-arrow arrow" @click="goRight()"><font-awesome-icon icon="fa-solid fa-arrow-right" /></div>
         </div>
       </div>
       <div class="jason-card">
-        <h3>Jason Bickford</h3>
-        <span>Founder and Executive Director</span>
+        <h3 class="f-2">Jason Bickford</h3>
+        <span class="f-1">Founder and Executive Director</span>
         <div class="line"></div>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus officia accusamus eligendi odio!</span>
+        <span class="f-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus officia accusamus eligendi odio!</span>
         <div class="jason-social">
           <div class="social-circle"><font-awesome-icon icon="fa-brands fa-linkedin-in" /></div>
           <div class="social-circle"><font-awesome-icon icon="fa-brands fa-facebook-f" /></div>
@@ -60,7 +61,32 @@ export default {
           text: 'Contact',
         },
       ],
+      arrImg: [
+        'img/h1-blog-img-04.jpg',
+        'img/h1-blog-img-03.jpg',
+        'img/h1-blog-img-02.jpg',
+        'img/h1-blog-img-01.jpg',
+      ],
+      currentImg: 0,
     };
+  },
+  methods: {
+    goLeft() {
+      if (this.currentImg === 0) {
+        this.currentImg = 3;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImg--;
+      }
+    },
+    goRight() {
+      if (this.currentImg === 3) {
+        this.currentImg = 0;
+      } else {
+        // eslint-disable-next-line no-plusplus
+        this.currentImg++;
+      }
+    },
   },
 };
 </script>
