@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/anchor-has-content -->
 <!-- eslint-disable max-len -->
 <template>
   <div class="container-two">
@@ -22,6 +23,7 @@
         </div>
       </div>
     </div>
+    <a href="#top" class="up-button" style="top: 50%"> <font-awesome-icon icon="fa-solid fa-arrow-right" /> </a>
   </div>
 </template>
 
@@ -58,6 +60,7 @@ export default {
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  position: relative;
 
   .upcoming-events{
     width: 30rem;

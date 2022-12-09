@@ -1,7 +1,9 @@
+<!-- eslint-disable vuejs-accessibility/anchor-has-content -->
 <!-- eslint-disable max-len -->
 <template>
   <div class="container-four">
     <div class="testimonials">
+      <a href="#top" class="up-button" style="top: 7rem"> <font-awesome-icon icon="fa-solid fa-arrow-right" /> </a>
       <h1 class="f-2">Testimonials.</h1>
       <div class="testimonial-info">
         <img :src="arrInfo[currentImg].img" alt="">
@@ -21,6 +23,7 @@
       </div>
     </div>
     <div class="video">
+      <a href="#top" class="up-button" style="top: 15rem"> <font-awesome-icon icon="fa-solid fa-arrow-right" /> </a>
       <img src="@/assets/img/h1-img-04.jpg" alt="" style="width: 100%">
       <font-awesome-icon icon="fa-solid fa-play" class="play"/>
       <div class="side-buttons">

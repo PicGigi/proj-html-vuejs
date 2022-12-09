@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/anchor-has-content -->
 <!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable max-len -->
 <template>
@@ -15,6 +16,8 @@
       </div>
     </div>
     <img src="@/assets/svg/svg-4.svg" alt="" class="bg-img">
+    <a href="#top" class="up-button" style="top: 20rem"> <font-awesome-icon icon="fa-solid fa-arrow-right" /> </a>
+    <a href="#top" class="up-button" style="bottom: 5rem"> <font-awesome-icon icon="fa-solid fa-arrow-right" /> </a>
     <div>
       <div class="main-slider">
         <img :src="arrImg[currentImg]" alt="">
@@ -95,7 +98,7 @@ export default {
 .container-one{
   background-color: #FAFAFA;
   width: 100%;
-  height: 165vh;
+  height: 130vh;
   position: relative;
   // TOP
   .main-top{

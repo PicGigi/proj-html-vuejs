@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/anchor-has-content -->
 <!-- eslint-disable max-len -->
 <template>
   <div class="container-three">
@@ -30,7 +31,6 @@
           <div class="bar"><div class="progress" style="width: 83%"></div></div>
         </div>
       </div>
-
     </div>
     <div class="latest-news">
       <img src="@/assets/svg/svg-4.svg" alt="" style="position:absolute; left: 5rem; top:-5rem ">
@@ -98,6 +98,8 @@
         </div>
       </div>
     </div>
+    <a href="#top" class="up-button" style="top: 7rem"> <font-awesome-icon icon="fa-solid fa-arrow-right" /> </a>
+    <a href="#top" class="up-button" style="top: 50%"> <font-awesome-icon icon="fa-solid fa-arrow-right" /> </a>
   </div>
 </template>
 
@@ -177,6 +179,7 @@ export default {
   .container-three{
     background-color: white;
     width: 100%;
+    position: relative;
     .line{
           background-color: #FF4612;
           width: 100px;

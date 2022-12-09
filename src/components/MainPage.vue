@@ -29,5 +29,18 @@ export default {
 </script>
 
 <style>
-
+.up-button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  color: #FF5612;
+  background-color: white;
+  right: 1rem;
+  rotate: -90deg;
+  z-index: 10;
+}
 </style>
